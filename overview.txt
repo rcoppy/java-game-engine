@@ -1,0 +1,32 @@
+/// Note to people from the future: The 'flex component' was a creative requirement within this project's rubric. This project was coded for an AP Computer Science class in early 2015.
+
+Just Keep Shooting: The Game
+
+What's my flex component? 
+
+The engine underlying the actual game, and the flexibility of the project as a whole.  
+
+This project took between 40 and 50 hours to complete from January 25th to February 11th. It's been more than half a month in the making. 
+
+Everything in this project, except for some basic underlying libraries for graphics, importing images, and math functions, is coded completely from scratch. (I did use the original in-class Swing example as a jumping-off point, but it's been altered significantly.)
+
+The vector class, the rect class, and the collision functions were all completed without tutorials. (The collisions are still really glitchy.) 
+
+The bulk of the time in this project was spent coding a highly modular, flexible, scalable game engine that could be easily expanded into a full game. 
+
+I was more or less successful at this; the actual game development took relatively little effort compared to the development of the engine. 
+The majority of the gameplay in the final game was coded and balanced in the course of six hours on Tuesday night.  
+
+The game itself is also very modular, and can easily be expanded. (If you look in the image resources folder, you'll see a long list of item sprites I just didn't have time to implement.)
+
+This is in part because of the modularity of the underlying engine, but also because I wrote the design document for this game incrementally, with a focus on first creating a minimum viable product before running off and tackling specific features.
+That focus on starting with a core saved my butt in terms of project scale (because I didn't really have time to get beyond a basic core - the final game is really more of a prototype than a finished product), but also let me build a framework for a game structured in a way that makes adding new features farther down the road easier.
+
+The different components of the engine are minimally dependent on each other: at most, instances will reference each other through the main GameWorld object or temporarily in a mutual collision event. 
+Everything is separate, compartmentalized, and clean, which makes the project readily extendable. The backend (like underlying collision algorithms) can be easily modified without breaking the front end, which makes overhauling specific parts of the engine easier.
+
+One of the biggest steps forward in the development of the engine was forcing the project into the Model-View-Controller format, which let me separate the game logic almost completely from the Java Swing backend; the project got a lot less messy, and individual classes became more specialized.
+
+So in sum: my game's flex component is its flexibility. It's built on a highly modular, extendable engine, and is highly modular and extendable itself. 
+The engine is really where the meat of the code (and development time) lies; the game is just a testament to what's possible within the engine framework. 
+
